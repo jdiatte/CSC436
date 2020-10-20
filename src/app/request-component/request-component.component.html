@@ -1,0 +1,35 @@
+<form oninput="price.value=parseInt(num_travelers.value)*150" #myForm="ngForm" (ngSubmit)="myForm.form.valid && onSubmit(myForm)">
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-3">
+        <label>Origination Airport</label>
+        <input type="text" name="orig_airport" class="form-control" [(ngModel)]="model.orig_airport">
+      </div>
+  
+      <div class="form-group col-md-4 mb-3">
+        <label>Destination Airport</label>
+        <input type="text" class="form-control" name="dest_airport" [(ngModel)]="model.dest_airport">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-3">
+        <label>Travel Date</label>
+        <input type="date" class="form-control" name="travel_date" [(ngModel)]="model.travel_date">
+      </div>
+      <div class="form-group col-md-4 mb-3">
+        <label>Number of Travelers</label>
+        <input type="number" class="form-control" name="num_travelers" id="num_travelers" value="model.num_travelers" [(ngModel)]="model.num_travelers">
+      </div>
+    </div>
+  
+    <div class="form-row">
+        <div class="form-group col-md-4 mb-3">
+            <label>Submission Date</label>
+            <input type="date" class="form-control" name="submit_date" [(ngModel)]="model.submit_date">
+          </div>
+    </div>
+    Price: $<output name="price" for="num_travelers"></output>
+    <div class="form-group">
+      <button class="btn btn-primary btn-block">Submit</button>
+    </div>
+  </form>

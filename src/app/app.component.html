@@ -1,3 +1,17 @@
-<div class="container">
-    <app-request-component></app-request-component>
-</div>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+    <ul class="navbar-nav">
+      <div class = "navbar-header">
+        <a class = "navbar-brand">CSC 436</a>
+     </div>
+     <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/request-component']">Flight</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']">About</a>
+      </li>
+    </ul>
+  </nav>
+  <br />
+  <br />
+  <br />
+  <router-outlet></router-outlet>
